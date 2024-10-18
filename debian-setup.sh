@@ -57,7 +57,7 @@ for package in "${unwanted_packages[@]}"; do
     sudo apt remove --purge -y "$package"
 done
 
-sudo apt purge -y 
+sudo apt purge --autoremove
 
 # Configure ClamAV
 sudo systemctl stop clamav-freshclam.service || true
